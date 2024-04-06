@@ -3,12 +3,7 @@ guid: 141af10b345aadc4192ea8705528f8b8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: bohater_mat
-    second: {fileID: 2100000, guid: 02ee8a0f821ffc246a1bae193f67073a, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
