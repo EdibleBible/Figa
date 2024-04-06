@@ -5,6 +5,8 @@ using UnityEngine;
 public class Hazard : MonoBehaviour
 {
     public int hazardDamage;
+    public bool isBullet;
+    public GameObject parent;
 
     // Start is called before the first frame update
     void Start()
