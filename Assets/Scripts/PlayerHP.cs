@@ -13,9 +13,13 @@ public class PlayerHP : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hazard") && playerCooldown == false)
         {
-            int hpChange = other.GetComponent<Hazard>().hazardDamage;
+            int hpChange = other.gameObject.GetComponent<Hazard>().hazardDamage;
             healthController.ChangePlayerHP(-hpChange);
             playerCooldown = true;
+            if (other.GetComponent<Hazard>().isBullet)
+            {
+                Destroy(other.gameObject.GetComponent<Hazard>().parent);
+            }
             StartCoroutine(DelayedSwitch());
         }
     }
