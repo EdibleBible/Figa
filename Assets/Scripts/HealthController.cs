@@ -19,7 +19,7 @@ public class HealthController : MonoBehaviour
     {
         healthPoints += hpChange;
         playerHpText.text = healthPoints.ToString();
-        if (healthPoints == 0)
+        if (healthPoints < 1)
         {
             deathScreen.SetActive(true);
             playerMovementScript.movementSpeed = 0;
