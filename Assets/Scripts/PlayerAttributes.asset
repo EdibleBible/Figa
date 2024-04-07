@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ca395e187a53524f88588f3f382ad15, type: 3}
   m_Name: PlayerAttributes
   m_EditorClassIdentifier: 
-  player1Health: 0
-  player1Damage: 0
-  player1ShotSpeed: 0
-  player1ShotInterval: 0
-  player1Armor: 0
-  player2Health: 0
-  player2Damage: 0
-  player2ShotSpeed: 0
-  player2ShotInterval: 0
-  player2Armor: 0
+  player1Health: 5
+  player1Damage: 5
+  player1ShotSpeed: 4
+  player1ShotInterval: 1
+  player1Armor: 5
+  player2Health: 5
+  player2Damage: 4
+  player2ShotSpeed: 2
+  player2ShotInterval: 5
+  player2Armor: 5
+  moneyCollected: 0

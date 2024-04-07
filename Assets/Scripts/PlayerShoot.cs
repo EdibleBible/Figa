@@ -25,7 +25,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Space) && shotIntervalLeft == 0)
+        if (Input.GetKey(KeyCode.Space) && shotIntervalLeft <= 0)
         {
 
             GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform);

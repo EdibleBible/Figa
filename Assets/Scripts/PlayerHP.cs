@@ -9,12 +9,14 @@ public class PlayerHP : MonoBehaviour
     public float playerCooldownTime = 1f;
     public bool playerCooldown = false;
     [SerializeField] private HealthController healthController;
+    [SerializeField] GameObject particleSystemPrefab;
 
     private void OnTriggerStay(Collider other)
     {
         if ((other.gameObject.CompareTag("Hazard") || other.gameObject.CompareTag("Enemy")) && playerCooldown == false)
         {
             int hpChange = other.gameObject.GetComponent<Hazard>().hazardDamage;
+            GameObject particleObject = Instantiate(particleSystemPrefab, transform);
             healthController.ChangePlayerHP(-hpChange, this.gameObject);
             playerCooldown = true;
             if (other.GetComponent<Hazard>().isBullet)

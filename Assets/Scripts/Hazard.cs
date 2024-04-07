@@ -8,6 +8,7 @@ public class Hazard : MonoBehaviour
     public bool isBullet;
     public GameObject parent;
     public int hazardHealth;
+    [SerializeField] GameObject particleSystemPrefab;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,7 @@ public class Hazard : MonoBehaviour
             Destroy(other.gameObject);
             if (hazardHealth < 1)
             {
+                GameObject particleObject = Instantiate(particleSystemPrefab, transform);
                 Destroy(parent);
             }
         }

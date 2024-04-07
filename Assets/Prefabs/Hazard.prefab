@@ -203,3 +203,5 @@ MonoBehaviour:
   hazardDamage: 1
   isBullet: 0
   parent: {fileID: 5640286231013229289}
+  hazardHealth: 0
+  particleSystemPrefab: {fileID: 6746929717722833282, guid: 943d0a921f3441a4e80d457f7e5f6e2d, type: 3}

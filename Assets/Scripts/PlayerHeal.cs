@@ -22,6 +22,7 @@ public class PlayerHeal : MonoBehaviour
         {
             playerAttributes.moneyCollected++;
             moneyText.text = playerAttributes.moneyCollected.ToString();
+            Destroy(other.gameObject);
         }
     }
 }
