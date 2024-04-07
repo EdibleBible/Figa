@@ -7,16 +7,20 @@ public class Hazard : MonoBehaviour
     public int hazardDamage;
     public bool isBullet;
     public GameObject parent;
+    public int hazardHealth;
+    [SerializeField] GameObject particleSystemPrefab;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.CompareTag("PlayerBullet"))
+        {
+            hazardHealth -= other.gameObject.GetComponent<Bullet>().bulletDamage;
+            Destroy(other.gameObject);
+            if (hazardHealth < 1)
+            {
+                GameObject particleObject = Instantiate(particleSystemPrefab, transform);
+                Destroy(parent);
+            }
+        }
     }
 }

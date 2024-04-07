@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7865575670860649753}
   m_Layer: 0
   m_Name: HPKit
-  m_TagString: HP
+  m_TagString: Money
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3ab5a90e564023a46b27a72e3eae352d, type: 2}
+  - {fileID: 2100000, guid: 662882f82f49f5c4ca9dabec65088f52, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
