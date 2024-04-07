@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &82498767739708152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 369559268905912908}
+  m_Layer: 0
+  m_Name: PlayerBulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &369559268905912908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82498767739708152}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.393, y: -0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5255132734392551925}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3776179269534886176
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,6 +98,7 @@ GameObject:
   - component: {fileID: 441449868580404759}
   - component: {fileID: 3446188753115922756}
   - component: {fileID: 1012714564989678936}
+  - component: {fileID: 5152289787363654775}
   m_Layer: 0
   m_Name: PlayerObject
   m_TagString: Player
@@ -89,6 +121,7 @@ Transform:
   m_Children:
   - {fileID: 120064539843892040}
   - {fileID: 7870205623982301200}
+  - {fileID: 369559268905912908}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &983666715044706872
@@ -175,6 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 8
+  cameraSidescroll: {fileID: 0}
+  untilAutoMovementInterval: 1
 --- !u!54 &1012714564989678936
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -202,6 +237,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &5152289787363654775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6235914256806087987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d685f81679fbe84e90ee7e5ddd3a9a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 349956152988079984, guid: dce802704833dd846bc8da5bbd032e9c, type: 3}
+  bulletSpawnPoint: {fileID: 82498767739708152}
+  bulletDirection: {x: 0, y: 0, z: 0}
 --- !u!1001 &7688259381510686715
 PrefabInstance:
   m_ObjectHideFlags: 0

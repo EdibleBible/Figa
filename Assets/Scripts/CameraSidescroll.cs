@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraSidescroll : MonoBehaviour
 {
-    [SerializeField] private float cameraSpeed = 0f;
+    [SerializeField] public float cameraSpeed = 0f;
 
     void Update()
     {

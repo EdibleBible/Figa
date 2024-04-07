@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Hazard
   - HP
+  - Enemy
+  - PlayerBullet
+  - Money
   layers:
   - Default
   - TransparentFX
